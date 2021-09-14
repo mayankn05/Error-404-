@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Scarecrow from "./Scarecrow.png";  
+import Header from './components/header/header'
+import './app.css'
 
-function App() {
+const App =() => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <>
+  <div className="header">
+  <Header/> </div> 
+
+<div className="data">
+  <div>
+  <img src={Scarecrow} alt="error404" style={{height: '60vh', width: '40vw'}}/> </div>
+  
+  <div className="text">
+  <h1>I have bad news for you</h1>
+  
+  <h3>The page you are looking for might be removed or is temporarily unavailable</h3>
+  
+  <button> BACK TO HOMEPAGE</button>
+  
+  </div>
+</div>
+  
+  </>
   );
-}
+};
 
 export default App;
